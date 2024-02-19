@@ -1,0 +1,203 @@
+body,
+html {
+  margin: 0;
+  padding: 0;
+  min-height: 100%;
+  max-width: 100%;
+  font-family: "Roboto", sans-serif;
+}
+
+a {
+  all: unset;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr;
+  row-gap: 30px;
+  background-color: blanchedalmond;
+  padding: 2rem 2rem;
+  text-align: center;
+  box-sizing: border-box;
+  max-width: 1024px;
+}
+
+.container > * {
+  width: calc(100% - 2rem);
+}
+
+.grid-title {
+  height: fit-content;
+}
+
+.grid-title > h1 {
+  margin: 0;
+  font-size: 3rem;
+}
+
+.grid-title > h3 {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+.grid-profile-image {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.grid-profile-image > img {
+  border-radius: 1000rem;
+  max-width: min(100%, 200px);
+  max-height: min(100%, 200px);
+  aspect-ratio: 1;
+}
+
+.section-title {
+  background-color: black;
+  color: white;
+  border-radius: 4rem;
+  text-align: center;
+  max-width: min(100%, 300px);
+  height: 60px;
+  display: flex;
+  align-items: center;
+  padding-left: 2rem;
+}
+
+.experience {
+  grid-row-end: span 2;
+}
+
+.experience-content {
+  text-align: start;
+  margin-top: 1rem;
+}
+
+.experience-content * {
+  margin: 0;
+}
+
+.experience-activities {
+  margin-top: 0.5rem;
+}
+
+.projects-content {
+  text-align: start;
+}
+
+.projects-content h3 {
+  margin: 0;
+  text-decoration: underline;
+}
+
+.project-activities {
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+  padding-left: 0;
+}
+
+.education-content {
+  text-align: start;
+  margin-top: 1rem;
+}
+
+.education-content * {
+  margin: 0;
+}
+
+.education-activities {
+  margin-top: 0.5rem;
+}
+
+.right-col-content {
+  background-color: lightgray;
+  border-radius: 8rem;
+  display: flex;
+  flex-direction: column;
+  padding: 2rem 3rem;
+  margin-top: 1rem;
+  text-align: start;
+}
+
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+}
+
+.topnav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: black;
+  color: #fff;
+}
+
+.topnav a:not(:first-child) {
+  display: none;
+}
+
+.topnav a.icon {
+  float: right;
+  display: block;
+}
+
+.topnav.responsive {
+  position: relative;
+}
+
+.topnav.responsive .icon {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.topnav.responsive a {
+  float: none;
+  display: block;
+  text-align: left;
+}
+
+@media only screen and (min-width: 768px) {
+  .container {
+    grid-template-columns: 4fr 3fr;
+    grid-template-rows: auto;
+    column-gap: 32px;
+    margin: auto;
+    text-align: start;
+  }
+
+  .grid-profile-image {
+    justify-content: flex-start;
+    padding: 0;
+  }
+
+  .project-activities {
+    padding-left: 40px;
+  }
+
+  .grid-title {
+    margin: 1rem;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .topnav a:not(:first-child) {
+    display: block;
+  }
+
+  .topnav a.icon {
+    display: none;
+  }
+}
